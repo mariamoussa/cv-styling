@@ -1,0 +1,263 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+}
+
+div[id="#wrapper"]{
+    margin: 0px 20px;
+}
+
+header > div{
+    display: flex;
+}
+
+header{
+    background-color:grey;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+hgroup{
+    color:#FF0000;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.content{
+    display: grid;
+    padding: 0% 10%;
+    grid-template-areas: "about competencies" "experiences education" "hobbies ." "contact .";
+    grid-template-columns: 1fr 1fr;
+}
+
+#about{
+    grid-area:about;
+    /* background-color: orange; */
+}
+
+#competencies{
+    grid-area: competencies;
+    /* background-color: red; */
+}
+
+#experiences{
+    grid-area: experiences;
+    /* background-color:green; */
+}
+
+#education{
+    grid-area: education;
+    /* background-color: fuchsia; */
+}
+
+#hobbies{
+    grid-area: hobbies;
+    /* background-color:grey; */
+}
+
+#contact{
+    grid-area: contact;
+    /* position: absolute;
+    top: 0px;
+    right: 300px; */
+    /* background-color:indigo; */
+}
+
+#contact > h3{
+    display: none;
+}
+
+h3{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid #999999;
+}
+h2{
+    font-size: 31px;
+    margin-top: -14px;
+}
+
+h3::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: -25px;
+    margin-left: -25px
+}
+
+.skills-primary::before{
+    content: "Main";
+    font-weight: bold;
+}
+
+p{
+    width: 89%;  
+}
+
+.skills > .skill{
+    padding-left: 7px;
+    padding-top: 7px;
+    margin-bottom: 3px;
+    height: 30px;
+}
+
+ .skills-primary > .skill{
+    background-color: #CCCCCC;
+}
+
+.skills-secondary > .skill{
+    background-color: #DBDBDB;
+}
+.skills-secondary > .skill > span{
+background-color: #ff6262;
+}
+
+.skills-secondary::before{
+    content: "Other";
+    font-weight: bold;
+    margin-top: 16px;
+    display: block;
+}
+
+.skill span{
+    background-color: red;
+    padding-right: 30%;
+}
+
+.skill > span{
+    background-color: #FF0000;
+    padding:2px 0px 2px 2px;
+}
+
+.skills-primary > div[data-skill="5"] > span{
+    padding-right: 40%;
+   
+}
+
+.skills-primary > div[data-skill="3"] > span{
+    padding-right: 20%;
+   
+}
+
+.skills-primary > div[data-skill="1"] > span{
+    padding-right:1%;
+   
+}
+
+.skills-secondary > div[data-skill="9"] > span{
+    padding-right: 80%;
+}
+
+.skills-secondary > div[data-skill="5"] > span{
+    padding-right: 40%;
+}
+
+.skills-secondary > div[data-skill="7"] > span{
+    padding-right: 60%;
+}
+
+.experience-type, .experience-date-separator,  .experience-institution{
+    color: red;
+}
+
+.experience-institution::before{
+    content: "@ ";
+}
+
+.experience-location ,.day , .month ,.year{
+    color:#bbb5b5;
+}
+
+a{
+    text-decoration: none;
+    color: #FF0000;
+}
+
+.contact{
+   display: flex;
+}
+
+@media(max-width:772px){
+    .content{
+        grid-template-areas:"about"
+                            "competencies"
+                            "experiences"
+                            "education" 
+                            "hobbies"
+                            "contact";
+        grid-template-columns: 1fr;
+    }
+
+    p{
+        width: 100%;
+    }
+    
+    dd{
+        background-color: white;
+        font-size: 13px;
+    }
+
+    dt{
+        background-color: #FF0000;
+        font-size: 13px;
+        width: 46%;
+        padding: 5px 0px;
+        margin-bottom: -20px;
+        color: white;    
+    }
+
+    header > div{
+        flex-direction: column;
+    }
+
+    h2{
+        margin-bottom: 3px;
+    }
+
+}
+
+
+@media(min-width:772px){
+    #contact{
+        position: absolute;
+        top:-2%;
+        right:10%;
+    }
+    #contact > h3{
+        display: none;
+    }
+    #contacts{
+        width: 60%;
+    }
+    dt{
+        
+        background-color: #FF0000;
+        width: 50%;
+        padding: 2px 0px;
+        margin-bottom: -20px;
+        color: white;
+        
+    }
+    .contact-value{
+        background-color: #000000;
+        min-width: 250px;
+        padding: 5px;
+       margin: 0px;
+        color: #FF0000;
+        margin-bottom: -26px;
+       
+    }
+}
+
+.experience-details{
+    color: grey;
+}
+
+
+
